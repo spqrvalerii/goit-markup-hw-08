@@ -1,82 +1,180 @@
-.team-section {
-   background-color: var(--button-secondary-bg-color);
+@media screen and (max-width: 767px) {
+   .team-section__list-item:not(:last-child) {
+      margin-bottom: 30px;
+   }
+
+   .team-section {
+      background-color: var(--button-secondary-bg-color);
+   }
+   
+   .team-section__title {
+      color: var(--title-text-color);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.18;
+      margin-bottom: 30px;
+      text-align: center;
+   }
+   
+   .team-card-wrapper__title {
+      color: var(--title-text-color);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 10px;
+   }
+   
+   .team-card-wrapper__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 16px;
+   }
+   
+   .team-section__list-item {
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+   }
+   
+   .team-card-wrapper {
+      background-color: var(--primary-bg-color);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      border-top: none;
+      border-right: var(--projects-card-border-color);
+      border-left: var(--projects-card-border-color);
+      border-bottom: var(--projects-card-border-color);
+   }
+   
+   .social-list {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+   }
+   
+   .social-list__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--primary-bg-color);
+      transition: background-color var(--transition-dur-and-func);
+   
+      &:hover,
+      &:focus {
+         background-color: var(--accent-color);
+      }
+   }
+   
+   .social-list__icon {
+      fill: var(--icons-color);
+      transition: fill var(--transition-dur-and-func);
+   
+      .social-list__link:hover &,
+      .social-list__link:focus & {
+         fill: var(--primary-bg-color);
+      }
+   }
 }
 
-.team-section-title {
-   color: var(--title-text-color);
-   font-weight: 700;
-   font-size: 36px;
-   line-height: 1.17;
-   margin-bottom: 50px;
-   text-align: center;
+@media screen and (min-width: 768px) {
+   .team-section {
+         background-color: var(--button-secondary-bg-color);
+      }
+   
+   .team-section__title {
+      color: var(--title-text-color);
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.18;
+      margin-bottom: 30px;
+      text-align: center;
+   }
+   
+   .team-card-wrapper__title {
+      color: var(--title-text-color);
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 10px;
+   }
+   
+   .team-card-wrapper__text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.19;
+      margin-bottom: 16px;
+   }
+   
+   .team-section__list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+   
+   .team-section__list-item {
+      flex-basis: calc((100% - 1 * 30px) / 2);
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+   }
+   
+   .team-card-wrapper {
+      background-color: var(--primary-bg-color);
+      padding-top: 30px;
+      padding-bottom: 30px;
+      text-align: center;
+      border-top: none;
+      border-right: var(--projects-card-border-color);
+      border-left: var(--projects-card-border-color);
+      border-bottom: var(--projects-card-border-color);
+   }
+   
+   .social-list {
+      display: flex;
+      justify-content: center;
+      column-gap: 10px;
+   }
+   
+   .social-list__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--primary-bg-color);
+      transition: background-color var(--transition-dur-and-func);
+   
+      &:hover,
+      &:focus {
+         background-color: var(--accent-color);
+      }
+   }
+   
+   .social-list__icon {
+      fill: var(--icons-color);
+      transition: fill var(--transition-dur-and-func);
+   
+      .social-list__link:hover &,
+      .social-list__link:focus & {
+         fill: var(--primary-bg-color);
+      }
+   }
 }
 
-.team-title {
-   color: var(--title-text-color);
-   font-weight: 500;
-   font-size: 16px;
-   line-height: 1.19;
-   margin-bottom: 10px;
-}
+@media screen and (min-width: 1200px) {
+   .team-section__title {
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 1.17;
+      margin-bottom: 50px;
+      text-align: center;
+   }
 
-.team-text {
-   font-weight: 400;
-   font-size: 16px;
-   line-height: 1.19;
-   margin-bottom: 16px;
-}
-
-.team-list {
-   display: flex;
-   flex-wrap: wrap;
-   gap: 30px;
-}
-
-.team-list-item {
-   flex-basis: calc((100% - 3 * 30px) / 4);
-   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-   border-radius: 0px 0px 4px 4px;
-}
-
-.team-card-wrapper {
-   background-color: var(--primary-bg-color);
-   padding-top: 30px;
-   padding-bottom: 30px;
-   text-align: center;
-   border-top: none;
-   border-right: var(--projects-card-border-color);
-   border-left: var(--projects-card-border-color);
-   border-bottom: var(--projects-card-border-color);
-}
-
-.social-list {
-   display: flex;
-   justify-content: center;
-   column-gap: 10px;
-}
-
-.social-list-link {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 44px;
-   height: 44px;
-   border-radius: 50%;
-   background-color: var(--primary-bg-color);
-   transition: background-color var(--transition-dur-and-func);
-
-   &:hover,
-   &:focus {
-      background-color: var(--accent-color);
-   }   
-}
-
-.social-list-icon {
-   fill: var(--icons-color);
-   transition: fill var(--transition-dur-and-func);
-
-   .social-list-link:hover &,
-   .social-list-link:focus & {
-      fill: var(--primary-bg-color);
+   .team-section__list-item {
+      flex-basis: calc((100% - 3 * 30px) / 4);
    }
 }
