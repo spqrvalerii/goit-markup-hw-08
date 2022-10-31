@@ -75,9 +75,7 @@ body {
     z-index: 100;
     width: 100%;
     height: 100%;
-    max-height: 796px;
     background-color: var(--primary-bg-color);
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -251,9 +249,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
 }
 
 @media screen and (min-width: 768px) {
+  .page-header__container {
+    height: 80px;
+  }
   .mobile-menu-btn {
     display: none;
   }
@@ -295,7 +297,7 @@ body {
     width: 100%;
     height: 4px;
     background-color: var(--accent-color);
-    bottom: -33px;
+    bottom: -31px;
     left: 0;
     border-radius: 2px;
   }
@@ -346,6 +348,8 @@ body {
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+    padding-top: 24px;
+    padding-bottom: 25px;
     transition: color var(--transition-dur-and-func);
   }
   .navigation__logo:hover, .navigation__logo:focus {
@@ -395,15 +399,21 @@ body {
     fill: var(--accent-color);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 480px) {
   .hero {
     background-color: var(--hero-footer-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/header/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero {
     text-align: center;
     padding-bottom: 118px;
     padding-top: 118px;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .hero__title {
     color: var(--primary-bg-color);
@@ -439,23 +449,31 @@ body {
     background-color: var(--button-hover-focus-bg-color);
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (max-width: 767px), screen and (min-resolution: 192dpi) and (max-width: 767px), screen and (min-resolution: 2dppx) and (max-width: 767px) {
+@media screen and (min-device-pixel-ratio: 2) and (max-width: 480px), screen and (min-resolution: 192dpi) and (max-width: 480px), screen and (min-resolution: 2dppx) and (max-width: 480px) {
   .hero {
     background-color: var(--hero-footer-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/mobile/header/img@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 481px) {
+  .hero {
+    background-color: var(--hero-footer-bg-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/header/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .hero {
-    background-color: var(--hero-footer-bg-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/header/img.jpg");
     text-align: center;
     padding-bottom: 118px;
     padding-top: 118px;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .hero__title {
     color: var(--primary-bg-color);
@@ -491,23 +509,34 @@ body {
     background-color: var(--button-hover-focus-bg-color);
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 481px), screen and (min-resolution: 192dpi) and (min-width: 481px), screen and (min-resolution: 2dppx) and (min-width: 481px) {
   .hero {
     background-color: var(--hero-footer-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/tablet/header/img@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hero {
+    background-color: var(--hero-footer-bg-color);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
-    background-color: var(--hero-footer-bg-color);
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/img.jpg");
     text-align: center;
     padding-bottom: 200px;
     padding-top: 200px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    max-width: 1600px;
   }
   .hero__title {
     color: var(--primary-bg-color);
@@ -523,12 +552,14 @@ body {
     margin-right: auto;
   }
 }
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px), screen and (min-resolution: 192dpi) and (min-width: 769px), screen and (min-resolution: 2dppx) and (min-width: 769px) {
   .hero {
     background-color: var(--hero-footer-bg-color);
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/desktop/hero/img@2x.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 767px) {
@@ -954,12 +985,14 @@ body {
   .page-footer__link:hover, .page-footer__link:focus {
     color: var(--accent-color);
   }
+  .main-footer {
+    margin-bottom: 60px;
+  }
   .footer-box {
     display: block;
   }
   .address-list {
     text-align: center;
-    margin-bottom: 60px;
   }
   .address-list__text {
     color: var(--primary-bg-color);
@@ -988,7 +1021,7 @@ body {
     color: var(--accent-color);
     transition: color var(--transition-dur-and-func);
   }
-  .footer-wrapper {
+  .footer-thumb {
     margin-bottom: 60px;
   }
   .footer-wrapper__text {

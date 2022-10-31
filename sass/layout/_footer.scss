@@ -25,14 +25,17 @@
          }
       }
    }
+
+   .main-footer {
+      margin-bottom: 60px;
+   }
    
    .footer-box {
       display: block;         
    }
 
    .address-list {
-      text-align: center;
-      margin-bottom: 60px;
+      text-align: center;      
       
       &__text {
          color: var(--primary-bg-color);
@@ -68,9 +71,12 @@
       }
    }
 
-   .footer-wrapper {
+   .footer-thumb {
       margin-bottom: 60px;
+   }
 
+   .footer-wrapper {
+      
       &__text {
          font-family: 'Roboto';
          font-style: normal;
