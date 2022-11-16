@@ -35,7 +35,11 @@
    }
 
    .address-list {
-      text-align: center;      
+      text-align: center;
+      
+      &__item:not(:last-child) {
+         margin-bottom: 8px;
+      }
       
       &__text {
          color: var(--primary-bg-color);
@@ -231,6 +235,10 @@
 
    .address-list {
       text-align: center;
+
+      &__item:not(:last-child) {
+         margin-bottom: 8px;
+      }
       
       &__text {
          color: var(--primary-bg-color);
@@ -415,6 +423,10 @@
    .address-list {
       text-align: start;
       width: 226px;
+
+      &__item:not(:last-child) {
+         margin-bottom: 9px;
+      }
    }
 
    .footer-wrapper {

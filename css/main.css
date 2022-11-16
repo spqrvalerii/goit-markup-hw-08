@@ -91,6 +91,10 @@ body {
     padding-left: 40px;
     padding-top: 48px;
     padding-bottom: 48px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 100vh;
   }
   .mobile-menu__close-btn {
     position: absolute;
@@ -106,7 +110,6 @@ body {
     flex-direction: column;
     row-gap: 32px;
     padding-left: 25px;
-    margin-bottom: 302px;
   }
   .mobile-menu__navigation-link {
     font-family: "Roboto";
@@ -994,6 +997,9 @@ body {
   .address-list {
     text-align: center;
   }
+  .address-list__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
   .address-list__text {
     color: var(--primary-bg-color);
     text-decoration: none;
@@ -1158,6 +1164,9 @@ body {
   .address-list {
     text-align: center;
   }
+  .address-list__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
   .address-list__text {
     color: var(--primary-bg-color);
     text-decoration: none;
@@ -1315,6 +1324,9 @@ body {
   .address-list {
     text-align: start;
     width: 226px;
+  }
+  .address-list__item:not(:last-child) {
+    margin-bottom: 9px;
   }
   .footer-wrapper {
     text-align: start;
